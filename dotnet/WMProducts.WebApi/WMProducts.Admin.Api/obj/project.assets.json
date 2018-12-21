@@ -11799,11 +11799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miengha\\Documents\\Personal\\Project\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\WMProducts.Admin.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Miengha\\Documents\\Personal\\WMProducts\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\WMProducts.Admin.Api.csproj",
       "projectName": "WMProducts.Admin.Api",
-      "projectPath": "C:\\Users\\Miengha\\Documents\\Personal\\Project\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\WMProducts.Admin.Api.csproj",
+      "projectPath": "C:\\Users\\Miengha\\Documents\\Personal\\WMProducts\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\WMProducts.Admin.Api.csproj",
       "packagesPath": "C:\\Users\\Miengha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miengha\\Documents\\Personal\\Project\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\obj\\",
+      "outputPath": "C:\\Users\\Miengha\\Documents\\Personal\\WMProducts\\dotnet\\WMProducts.WebApi\\WMProducts.Admin.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
