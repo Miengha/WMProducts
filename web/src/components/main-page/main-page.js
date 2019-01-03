@@ -1,5 +1,14 @@
+import { inject } from 'aurelia-framework';
+import { ValuesRespository } from '../../repositories/values-repository';
+
+@inject(ValuesRespository)
 export class MainClass {
-  constructor() {
-    this.message = 'A message from the main class';
+
+  constructor(valuesRespository) {
+    this.valuesRespository = valuesRespository;
+    this.message = 'Data from the values controller';
+    this.valuesRespository.getValuesController().then((data) => {
+      this.values = data;
+    });
   }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WMProducts.Admin.Api.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("api/v1/values")]
   [ApiController]
   public class ValuesController : ControllerBase
   {
@@ -14,7 +11,8 @@ namespace WMProducts.Admin.Api.Controllers
     [HttpGet]
     public ActionResult<IEnumerable<string>> Get()
     {
-      return new string[] { "value1", "value2" };
+      var values = new string[] { "value1", "value2" };
+      return values;
     }
 
     // GET api/values/5

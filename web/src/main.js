@@ -12,6 +12,7 @@ Bluebird.config({ warnings: { wForgottenReturn: false } });
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
+    .instance('apiRoot', environment.apiRoot)
     .feature(PLATFORM.moduleName('resources/index'))
     .feature(PLATFORM.moduleName('resources/index'))
     .plugin(PLATFORM.moduleName('aurelia-api'), config => AureliaApiConfig(config))
