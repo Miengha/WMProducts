@@ -1,7 +1,10 @@
 import '@babel/polyfill';
-import environment from './environment';
-import {PLATFORM} from 'aurelia-pal';
+import { PLATFORM } from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
+// we want font-awesome to load as soon as possible to show the fa-spinner
+import { AureliaApiConfig } from 'config/aurelia-api';
+import authConfig from 'config/auth-config';
+import environment from './environment';
 
 // remove out if you don't want a Promise polyfill (remove also from webpack.config.js)
 Bluebird.config({ warnings: { wForgottenReturn: false } });
@@ -9,7 +12,13 @@ Bluebird.config({ warnings: { wForgottenReturn: false } });
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature(PLATFORM.moduleName('resources/index'));
+    .instance('apiRoot', environment.apiRoot)
+    .feature(PLATFORM.moduleName('resources/index'))
+    .feature(PLATFORM.moduleName('resources/index'))
+    .plugin(PLATFORM.moduleName('aurelia-api'), config => AureliaApiConfig(config))
+    .plugin(PLATFORM.moduleName('aurelia-authentication'), baseConfig => { baseConfig.configure(authConfig); })
+    .plugin(PLATFORM.moduleName('aurelia-dialog'))
+    .plugin(PLATFORM.moduleName('aurelia-validation'));
 
   // Uncomment the line below to enable animation.
   // aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));
@@ -24,5 +33,5 @@ export function configure(aurelia) {
     aurelia.use.plugin(PLATFORM.moduleName('aurelia-testing'));
   }
 
-  return aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
+  return aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('components/main-page/main-page')));
 }
