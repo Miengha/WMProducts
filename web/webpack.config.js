@@ -145,6 +145,9 @@ module.exports = ({ production, server, extractCss, coverage, analyze, karma } =
   plugins: [
     ...when(!karma, new DuplicatePackageCheckerPlugin()),
     new AureliaPlugin(),
+    new ModuleDependenciesPlugin({
+      'aurelia-authentication': ['./authFilterValueConverter']
+    }),
     new ProvidePlugin({
       'Promise': 'bluebird'
     }),
