@@ -1,5 +1,5 @@
 export default {
   debug: false,
   testing: false,
-  apiRoot: "",
+  apiRoot: "http://wmproducts.us-east-2.elasticbeanstalk.com/",
 };
