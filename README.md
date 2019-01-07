@@ -73,3 +73,7 @@
 ```docker run -d --rm -p 80:80 --name wmprodv{versionnumber} {myname}b/dockeraurelia:wmprodv{versionnumber}```
 
 * I haven't figured out anything else from here, still working on it.
+
+## End Note
+
+This is as far as I've gotten. If you feel anything needs changing, or discussing, let me know and we can change. The application itself is little more than a "Hello World" equivalent with a small call to the API to make sure that those calls work.
