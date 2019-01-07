@@ -24,16 +24,15 @@
 * Open `/dotnet/wmproducts.webapi/wmproducts.webapi.sln` in Microsoft Visual Studio, restore Nuget packages and run as normal
 
 ### Front-end
-Navigate to `/web` folder, right-click and open with Microsoft Visual Studio Code. In the Nav-bar on top of the application, select `View` and then `Integrated Terminal`. In this terminal, type:
+* Navigate to `/web` folder, right-click and open with Microsoft Visual Studio Code. In the Nav-bar on top of the application, select `View` and then `Integrated Terminal`. In this terminal, type:
 
 ```npm install```
 
-Let this complete.
-Once this is complete, type the following into the terminal:
+* Once this is complete, type the following into the terminal:
 
 ```au run --watch```
 
-Once the terminal says "Succeeded" the application can be accessed at [http://localhost:8080]
+* Once the terminal says "Succeeded" the application can be accessed at [http://localhost:8080]
 
 ## Deployment Process
 
